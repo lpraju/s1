@@ -6,4 +6,7 @@ Invoke-WebRequest -Uri 'https://binaries.webex.com/vdi-hvd-aws-gold/202304210756
 .\webex.msi /qn
 Invoke-WebRequest -Uri 'https://cdn.zoom.us/prod/5.14.10.17221/x64/ZoomInstallerFull.msi' -OutFile c:\kits\apps\zoom.msi
 msiexec /i "zoom.msi" /qn
-Start-Process -FilePath "C:\Windows\System32\sysprep\sysprep.exe" -ArgumentList "/oobe", "/generalize", "/restart" -Verb runAs
+cmd -verb runas
+cd C:\Windows\System32\sysprep
+sysprep /oobe /generalize /reboot
+#Start-Process -FilePath "C:\Windows\System32\sysprep\sysprep.exe" -ArgumentList "/oobe", "/generalize", "/restart" -Verb runAs
