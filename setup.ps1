@@ -12,4 +12,4 @@ sleep60
 #cmd -verb runas
 #cd C:\Windows\System32\sysprep
 #sysprep /oobe /generalize /reboot
-Start-Process -FilePath "C:\Windows\System32\sysprep\sysprep.exe" -ArgumentList "/oobe", "/generalize", "/restart" -Verb runAs
+#Start-Process -FilePath "C:\Windows\System32\sysprep\sysprep.exe" -ArgumentList "/oobe", "/generalize", "/restart" -Verb runAs
