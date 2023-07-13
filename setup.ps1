@@ -5,6 +5,7 @@ Invoke-WebRequest -Uri 'https://dl.google.com/tag/s/appguid%3D%7B8A69D345-D564-4
 Invoke-WebRequest -Uri 'https://cdn.zoom.us/prod/5.14.10.17221/x64/ZoomInstallerFull.msi' -OutFile c:\kits\apps\zoom.msi
 sleep60
 .\zoom.msi /qn
+sleep60
 Start-Process -FilePath "C:\Windows\System32\sysprep\sysprep.exe" -ArgumentList "/oobe", "/generalize", "/shutdown" -Verb runAs
 #msiexec /i "zoom.msi" /qn
 #cmd -verb runas
