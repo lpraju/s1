@@ -6,7 +6,10 @@ Invoke-WebRequest -Uri 'https://avdessenstor2307.blob.core.windows.net/avdessenc
 .\zoom.msi /qn
 Invoke-WebRequest -Uri 'https://avdessenstor2307.blob.core.windows.net/avdessencontainerbyraju/Greenshot.exe' -OutFile c:\kits\apps\Greenshot.exe
 sleep 60
-.\Greenshot.exe /vERYSILENT /NORESTART
+.\Greenshot.exe /VERYSILENT /NORESTART
+Invoke-WebRequest -Uri 'https://avdessenstor2307.blob.core.windows.net/avdessencontainerbyraju/Webex.msi' -OutFile c:\kits\apps\Webex.msi
+sleep 60
+.\Webex.msi /qn
 #Start-Process -FilePath "C:\Windows\System32\sysprep\sysprep.exe" -ArgumentList "/oobe", "/generalize", "/shutdown" -Verb runAs
 #msiexec /i "zoom.msi" /qn
 #cmd -verb runas
